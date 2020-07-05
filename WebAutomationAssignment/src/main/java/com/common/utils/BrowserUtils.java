@@ -1,9 +1,11 @@
 package com.common.utils;
 
+
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -78,10 +80,12 @@ public class BrowserUtils {
 			isWebElementDisplayed(locator);
 			ele.click();
 			LOGGER.info("Successfully clicked on " + locator + " element");
+			return flag;
 		} catch (Exception e) {
 			Assert.fail("Unable to click on " + locator + " element due to: " + e.getMessage());
+			flag = false;
+			return flag;
 		}
-		return flag;
 	}
 
 	public String sendKeysOnTxtField(By locator, String keysToSend) {
@@ -121,6 +125,26 @@ public class BrowserUtils {
 		return attributeValue;
 	}
 
+	public boolean clickOnElementUsingJavaScriptExecutor(By locator) {
+		try {
+			WebElement ele = driver.findElement(locator);
+			JavascriptExecutor executor = (JavascriptExecutor) driver;
+			executor.executeScript("arguments[0].click();", ele);
+			return flag;
+		} catch (Exception e) {
+			Assert.fail("Unable to click on " + locator + " element due to: " + e.getMessage());
+			flag = false;
+			return flag;
+		}
 
+	}
 
+	public void switchiFrame() {
+		try {
+			driver.switchTo().frame("snap-midtrans");
+		}catch (Exception e) {
+			Assert.fail("Unable to switch to iframe due to " + e.getMessage());
+		}
+
+	}
 }
