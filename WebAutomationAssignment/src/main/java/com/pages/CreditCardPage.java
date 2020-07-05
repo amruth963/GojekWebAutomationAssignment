@@ -28,30 +28,6 @@ public class CreditCardPage extends BrowserUtils {
 		return totalAmount;
 	}
 
-	public String verifyEmailInCreditCardPage() {
-		String email = null;
-		try {
-			webDriverWait(CreditCardPageObjects.EMAILINCREDITCARDPAGE);
-			isWebElementDisplayed(CreditCardPageObjects.EMAILINCREDITCARDPAGE);
-			email = getAttribute(CreditCardPageObjects.EMAILINCREDITCARDPAGE, "placeholder");
-		}catch (Exception e) {
-			LOGGER.info("Unable to get email due to "+e.getMessage());
-		}
-		return email;
-	}
-
-	public String verifyPhoneNoCreditCardPage() {
-		String phoneNo = null;
-		try {
-			webDriverWait(CreditCardPageObjects.PHONENOINCREDITCARDPAGE);
-			isWebElementDisplayed(CreditCardPageObjects.PHONENOINCREDITCARDPAGE);
-			phoneNo = getAttribute(CreditCardPageObjects.PHONENOINCREDITCARDPAGE, "placeholder");
-		}catch (Exception e) {
-			LOGGER.info("Unable to get phone no due to "+e.getMessage());
-		}
-		return phoneNo;
-	}
-
 	public boolean enterValidCardNumber(String cardNumber) {
 		try {
 			webDriverWait(CreditCardPageObjects.CARDNUMBERTXTFIELD);
