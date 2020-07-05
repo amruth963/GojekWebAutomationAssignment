@@ -225,6 +225,7 @@ public class HomePage extends BrowserUtils{
 			enterCity(city);
 			enterAddress(address);
 			enterPostalCode(postalCode);
+			clickOnCheckOutBtn();
 			return flag;
 		}catch (Exception e) {
 			LOGGER.info("Error due to "+e.getMessage());
