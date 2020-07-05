@@ -16,7 +16,7 @@ public class HomePage extends BrowserUtils{
 		PageFactory.initElements(driver, this);
 	}
 
-	public boolean launchXoxodayUrl() {
+	public boolean launchUrl() {
 		try {
 			driver.get(configReader.getStaticProperty("url"));
 			LOGGER.info(configReader.getStaticProperty("url") +" URL launched successfully");
@@ -40,5 +40,17 @@ public class HomePage extends BrowserUtils{
 		return pillowTitle;
 	}
 
+	public boolean clickOnBuyNowBtn() {
+		try {
+			webDriverWait(HomePageObjects.BUYNOWBTN);
+			isWebElementDisplayed(HomePageObjects.BUYNOWBTN);
+			clickOnElement(HomePageObjects.BUYNOWBTN);
+			return flag;
+		}catch (Exception e) {
+			LOGGER.info("Unable to click on Buy Now button due to "+e.getMessage());
+			flag = false;
+			return flag;
+		}
+	}
 
 }
