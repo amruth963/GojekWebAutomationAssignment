@@ -9,5 +9,8 @@ public class PageConstants {
 	public static final String CITY = "Bangalore";
 	public static final String ADDRESS = "Bangalore South";
 	public static final String POSTALCODE = "560041";
+	public static final String TRANSACTIONSUCCSSMSG = "Transaction successful";
+	public static final String TRANSACTIONFAILUREMSG = "Transaction failed";
+	public static final String TRANSACTIONFAILUREREASON = "Your card got declined by the bank";
 
 }
