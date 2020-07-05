@@ -5,8 +5,6 @@ import org.openqa.selenium.By;
 public class CreditCardPageObjects {
 
 	public static By TOTALAMOUNTINPAYMENTPAGE = By.xpath("//span[@class='text-amount-amount']");
-	public static By EMAILINCREDITCARDPAGE = By.xpath("//*[@class='input-group col-xs-12']/input[@type='email']");
-	public static By PHONENOINCREDITCARDPAGE = By.xpath("//*[@class='input-group col-xs-12']/input[@type='tel' and @class='filled']");
 	public static By CARDNUMBERTXTFIELD = By.xpath("//*[contains(text(),'Card number')]");
 	public static By EXPIRYDATETXTFIELD = By.xpath("//*[contains(text(),'Expiry date')]");
 	public static By CVVTXTFIELD = By.xpath("//*[contains(text(),'CVV')]");
