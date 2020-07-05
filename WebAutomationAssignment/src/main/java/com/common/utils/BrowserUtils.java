@@ -108,6 +108,19 @@ public class BrowserUtils {
 		return text;
 	}
 
+	public String getAttribute(By locator, String attributeName) {
+		String attributeValue = null;
+		try {
+			WebElement ele = webDriverWait(locator);
+			if (ele.isDisplayed()) {
+				attributeValue = ele.getAttribute(attributeName);
+			}
+		} catch (Exception e) {
+			Assert.fail("Unable to get attibute with given " + locator + " and " + attributeName + " due to :" + e.getMessage());
+		}
+		return attributeValue;
+	}
+
 
 
 }
