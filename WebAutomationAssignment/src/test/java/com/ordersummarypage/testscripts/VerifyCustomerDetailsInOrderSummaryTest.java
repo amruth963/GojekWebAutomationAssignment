@@ -1,4 +1,4 @@
-package com.ordersummary.testscripts;
+package com.ordersummarypage.testscripts;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
