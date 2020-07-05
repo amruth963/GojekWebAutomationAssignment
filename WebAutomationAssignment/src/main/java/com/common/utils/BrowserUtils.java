@@ -96,6 +96,18 @@ public class BrowserUtils {
 		return keysToSend;
 	}
 
+	public String getText(By locator) {
+		String text = null;
+		try {
+			WebElement ele = webDriverWait(locator);
+			isWebElementDisplayed(locator);
+			text = ele.getText();
+		} catch (Exception e) {
+			Assert.fail("WebElement is not displayed with given " + locator + " due to " + e.getMessage());
+		}
+		return text;
+	}
+
 
 
 }
