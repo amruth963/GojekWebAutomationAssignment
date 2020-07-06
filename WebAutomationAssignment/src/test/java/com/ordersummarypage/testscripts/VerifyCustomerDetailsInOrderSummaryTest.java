@@ -19,7 +19,7 @@ public class VerifyCustomerDetailsInOrderSummaryTest extends BrowserUtils{
 		Assert.assertEquals(homePage.verifyPillowTitle(), PageConstants.MIDTRANSPILLOWTITLE);
 		Assert.assertEquals(homePage.clickOnBuyNowBtn(), true);
 		homePage.enterCustomerDetailsAndClickOnCheckoutBtn(PageConstants.USERNAME, PageConstants.EMAIL, PageConstants.PHONENO, PageConstants.CITY, PageConstants.ADDRESS, PageConstants.POSTALCODE);
-		switchiFrame();
+		switchiFrameOne();
 		orderSummaryPage.clickOnShippingDetailsTab();
 		if(orderSummaryPage.getShippingDetailsValue().contains(PageConstants.USERNAME)) {
 			System.out.println("User name "+PageConstants.USERNAME+" is displayed");
@@ -34,7 +34,7 @@ public class VerifyCustomerDetailsInOrderSummaryTest extends BrowserUtils{
 		Assert.assertEquals(homePage.verifyPillowTitle(), PageConstants.MIDTRANSPILLOWTITLE);
 		Assert.assertEquals(homePage.clickOnBuyNowBtn(), true);
 		homePage.enterCustomerDetailsAndClickOnCheckoutBtn(PageConstants.USERNAME, PageConstants.EMAIL, PageConstants.PHONENO, PageConstants.CITY, PageConstants.ADDRESS, PageConstants.POSTALCODE);
-		switchiFrame();
+		switchiFrameOne();
 		orderSummaryPage.clickOnShippingDetailsTab();
 		if(orderSummaryPage.getShippingDetailsValue().contains(PageConstants.EMAIL)) {
 			System.out.println("User email "+PageConstants.EMAIL+" is displayed");
@@ -49,7 +49,7 @@ public class VerifyCustomerDetailsInOrderSummaryTest extends BrowserUtils{
 		Assert.assertEquals(homePage.verifyPillowTitle(), PageConstants.MIDTRANSPILLOWTITLE);
 		Assert.assertEquals(homePage.clickOnBuyNowBtn(), true);
 		homePage.enterCustomerDetailsAndClickOnCheckoutBtn(PageConstants.USERNAME, PageConstants.EMAIL, PageConstants.PHONENO, PageConstants.CITY, PageConstants.ADDRESS, PageConstants.POSTALCODE);
-		switchiFrame();
+		switchiFrameOne();
 		orderSummaryPage.clickOnShippingDetailsTab();
 		if(orderSummaryPage.getShippingDetailsValue().contains(PageConstants.PHONENO)) {
 			System.out.println("User phone no "+PageConstants.PHONENO+" is displayed");
@@ -64,7 +64,7 @@ public class VerifyCustomerDetailsInOrderSummaryTest extends BrowserUtils{
 		Assert.assertEquals(homePage.verifyPillowTitle(), PageConstants.MIDTRANSPILLOWTITLE);
 		Assert.assertEquals(homePage.clickOnBuyNowBtn(), true);
 		homePage.enterCustomerDetailsAndClickOnCheckoutBtn(PageConstants.USERNAME, PageConstants.EMAIL, PageConstants.PHONENO, PageConstants.CITY, PageConstants.ADDRESS, PageConstants.POSTALCODE);
-		switchiFrame();
+		switchiFrameOne();
 		orderSummaryPage.clickOnShippingDetailsTab();
 		if(orderSummaryPage.getShippingDetailsValue().contains(PageConstants.ADDRESS)) {
 			System.out.println("User phone no "+PageConstants.ADDRESS+" is displayed");

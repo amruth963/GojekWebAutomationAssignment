@@ -21,7 +21,7 @@ public class VerifyPillowTotalInOrderSummaryTest extends BrowserUtils{
 		String totalPriceInHomePage = homePage.getText(HomePageObjects.TOTALAMOUNTONHOMESCREEN);
 		Assert.assertEquals(homePage.clickOnBuyNowBtn(), true);
 		homePage.enterCustomerDetailsAndClickOnCheckoutBtn(PageConstants.USERNAME, PageConstants.EMAIL, PageConstants.PHONENO, PageConstants.CITY, PageConstants.ADDRESS, PageConstants.POSTALCODE);
-		switchiFrame();
+		switchiFrameOne();
 		String totalPriceInOrderSummaryPage = orderSummaryPage.verifyPillowTotalOnOrderSummaryPage();
 		Assert.assertEquals(totalPriceInOrderSummaryPage,totalPriceInHomePage);
 		orderSummaryPage.clickOnContinueBtn();

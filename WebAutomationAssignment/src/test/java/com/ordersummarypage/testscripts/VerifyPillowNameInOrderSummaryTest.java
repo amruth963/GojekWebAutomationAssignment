@@ -20,7 +20,7 @@ public class VerifyPillowNameInOrderSummaryTest extends BrowserUtils{
 		String pillowTitleInHomePage = homePage.verifyPillowTitle();
 		Assert.assertEquals(homePage.clickOnBuyNowBtn(), true);
 		homePage.enterCustomerDetailsAndClickOnCheckoutBtn(PageConstants.USERNAME, PageConstants.EMAIL, PageConstants.PHONENO, PageConstants.CITY, PageConstants.ADDRESS, PageConstants.POSTALCODE);
-		switchiFrame();
+		switchiFrameOne();
 		String pillowTitleInOrderSummaryPage = orderSummaryPage.verifyPillowNameInOrderSummaryPage();
 		Assert.assertEquals(pillowTitleInOrderSummaryPage, pillowTitleInHomePage);
 	}
