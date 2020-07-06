@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.common.utils.ListenerTest"></listener>
+	</listeners>
+	<test name="Test">
+		<classes>
+			<class
+				name="com.creditcardpage.testscripts.VerifyPillowTotalInCreditCardPageTest" />
+			<class
+				name="com.homepage.testscripts.VerifyPillowTotalInShoppingCartTest" />
+			<class
+				name="com.creditcardpage.testscripts.EnterInvalidCardDetailsTest" />
+			<class
+				name="com.creditcardpage.testscripts.EnterValidCardDetailsTest" />
+			<class name="com.common.utils.BrowserUtils" />
+			<class
+				name="com.ordersummarypage.testscripts.VerifyPillowTotalInOrderSummaryTest" />
+			<class name="com.homepage.testscripts.EnterCustomerDetailsTest" />
+			<class
+				name="com.ordersummarypage.testscripts.ClickOnContinueBtnAndSelectPaymentMethodTest" />
+			<class
+				name="com.homepage.testscripts.VerifyPillowAndClickOnBuyNowBtnTest" />
+			<class
+				name="com.homepage.testscripts.EnterCustomerDetailsAndCheoutOutTest" />
+			<class
+				name="com.ordersummarypage.testscripts.VerifyCustomerDetailsInOrderSummaryTest" />
+			<class name="com.homepage.testscripts.VerifyPillowTitleTest" />
+			<class
+				name="com.ordersummarypage.testscripts.VerifyPillowNameInOrderSummaryTest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
