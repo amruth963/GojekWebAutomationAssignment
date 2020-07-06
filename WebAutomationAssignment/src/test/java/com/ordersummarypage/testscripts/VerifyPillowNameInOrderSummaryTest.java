@@ -1,5 +1,7 @@
 package com.ordersummarypage.testscripts;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -16,13 +18,13 @@ public class VerifyPillowNameInOrderSummaryTest extends BrowserUtils{
 	@Test(description = "Verify 'Midtrans' pillow name in order summary screen")
 	public void verifyPillowNameInOrderSummary() {
 		homePage.launchUrl();
-		Assert.assertEquals(homePage.verifyPillowTitle(), PageConstants.MIDTRANSPILLOWTITLE);
+		AssertJUnit.assertEquals(homePage.verifyPillowTitle(), PageConstants.MIDTRANSPILLOWTITLE);
 		String pillowTitleInHomePage = homePage.verifyPillowTitle();
-		Assert.assertEquals(homePage.clickOnBuyNowBtn(), true);
+		AssertJUnit.assertEquals(homePage.clickOnBuyNowBtn(), true);
 		homePage.enterCustomerDetailsAndClickOnCheckoutBtn(PageConstants.USERNAME, PageConstants.EMAIL, PageConstants.PHONENO, PageConstants.CITY, PageConstants.ADDRESS, PageConstants.POSTALCODE);
 		switchiFrameOne();
 		String pillowTitleInOrderSummaryPage = orderSummaryPage.verifyPillowNameInOrderSummaryPage();
-		Assert.assertEquals(pillowTitleInOrderSummaryPage, pillowTitleInHomePage);
+		AssertJUnit.assertEquals(pillowTitleInOrderSummaryPage, pillowTitleInHomePage);
 	}
 
 }
