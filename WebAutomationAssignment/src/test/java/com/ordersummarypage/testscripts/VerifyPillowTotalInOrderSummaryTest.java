@@ -14,7 +14,7 @@ public class VerifyPillowTotalInOrderSummaryTest extends BrowserUtils{
 	private HomePage homePage = new HomePage();
 	private OrderSummaryPage orderSummaryPage = new OrderSummaryPage();
 
-	@Test
+	@Test(description = "Verify pillow totakl between Home Page and Order Summary Page")
 	public void verifyPillowTotalInOrderSummary() {
 		homePage.launchUrl();
 		Assert.assertEquals(homePage.verifyPillowTitle(), PageConstants.MIDTRANSPILLOWTITLE);

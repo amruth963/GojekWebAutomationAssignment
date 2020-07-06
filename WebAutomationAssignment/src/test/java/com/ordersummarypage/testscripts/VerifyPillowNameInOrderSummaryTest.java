@@ -13,7 +13,7 @@ public class VerifyPillowNameInOrderSummaryTest extends BrowserUtils{
 	private HomePage homePage = new HomePage();
 	private OrderSummaryPage orderSummaryPage = new OrderSummaryPage();
 
-	@Test
+	@Test(description = "Verify 'Midtrans' pillow name in order summary screen")
 	public void verifyPillowNameInOrderSummary() {
 		homePage.launchUrl();
 		Assert.assertEquals(homePage.verifyPillowTitle(), PageConstants.MIDTRANSPILLOWTITLE);

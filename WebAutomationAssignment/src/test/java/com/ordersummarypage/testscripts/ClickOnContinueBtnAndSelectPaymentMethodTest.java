@@ -14,7 +14,7 @@ public class ClickOnContinueBtnAndSelectPaymentMethodTest extends BrowserUtils {
 	private HomePage homePage = new HomePage();
 	private OrderSummaryPage orderSummaryPage = new OrderSummaryPage();
 
-	@Test
+	@Test(description = "Verify click on continue button and selection of credit card payment option")
 	public void clickOnContinueBtnAndSelectCreditCardPayment() {
 		homePage.launchUrl();
 		Assert.assertEquals(homePage.verifyPillowTitle(), PageConstants.MIDTRANSPILLOWTITLE);
