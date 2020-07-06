@@ -1,5 +1,7 @@
 package com.homepage.testscripts;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -17,7 +19,7 @@ public class VerifyPillowTotalInShoppingCartTest extends BrowserUtils{
 		String totalPriceInHomePage = homePage.getText(HomePageObjects.TOTALAMOUNTONHOMESCREEN);
 		homePage.clickOnBuyNowBtn();
 		String totalPriceInCartPage = homePage.getText(HomePageObjects.TOTALAMOUNTONCART);
-		Assert.assertEquals(totalPriceInCartPage, totalPriceInHomePage);
+		AssertJUnit.assertEquals(totalPriceInCartPage, totalPriceInHomePage);
 	}
 
 }

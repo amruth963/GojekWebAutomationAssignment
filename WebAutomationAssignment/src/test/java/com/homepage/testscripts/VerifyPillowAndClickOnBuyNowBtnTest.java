@@ -1,5 +1,7 @@
 package com.homepage.testscripts;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -14,8 +16,8 @@ public class VerifyPillowAndClickOnBuyNowBtnTest  extends BrowserUtils {
 	@Test(description = "Verify 'Midtrans Pillow' and click on BUY NOW BUTTON")
 	public void verifyPillowAndClickOnBuyNowBtn() {
 		homePage.launchUrl();
-		Assert.assertEquals(homePage.verifyPillowTitle(), PageConstants.MIDTRANSPILLOWTITLE);
-		Assert.assertEquals(homePage.clickOnBuyNowBtn(), true);
+		AssertJUnit.assertEquals(homePage.verifyPillowTitle(), PageConstants.MIDTRANSPILLOWTITLE);
+		AssertJUnit.assertEquals(homePage.clickOnBuyNowBtn(), true);
 	}
 
 }
