@@ -1,5 +1,7 @@
 package com.creditcardpage.testscripts;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -20,8 +22,8 @@ public class EnterInvalidCardDetailsTest extends BrowserUtils{
 	@Test(description = "Verify Transaction failure message on entering invalid card details")
 	public void enterInValidCardDetailsTransactionFailedMsg() {
 		homePage.launchUrl();
-		Assert.assertEquals(homePage.verifyPillowTitle(), PageConstants.MIDTRANSPILLOWTITLE);
-		Assert.assertEquals(homePage.clickOnBuyNowBtn(), true);
+		AssertJUnit.assertEquals(homePage.verifyPillowTitle(), PageConstants.MIDTRANSPILLOWTITLE);
+		AssertJUnit.assertEquals(homePage.clickOnBuyNowBtn(), true);
 		homePage.enterCustomerDetailsAndClickOnCheckoutBtn(PageConstants.USERNAME, PageConstants.EMAIL, PageConstants.PHONENO, PageConstants.CITY, PageConstants.ADDRESS, PageConstants.POSTALCODE);
 		switchiFrameOne();
 		orderSummaryPage.clickOnContinueBtn();
@@ -33,15 +35,15 @@ public class EnterInvalidCardDetailsTest extends BrowserUtils{
 		creditCardPage.enterOTP(configReader.getStaticProperty("otp"));
 		creditCardPage.clickOnOkBtn();
 		switchiFrameOne();
-		Assert.assertEquals(creditCardPage.getTransactionFailureMsg(), PageConstants.TRANSACTIONFAILUREMSG);
+		AssertJUnit.assertEquals(creditCardPage.getTransactionFailureMsg(), PageConstants.TRANSACTIONFAILUREMSG);
 	}
 
 
 	@Test(description = "Verify Transaction failure message reaseon on entering invalid card details")
 	public void enterInValidCardDetailsTransactionFailedMsgReason() {
 		homePage.launchUrl();
-		Assert.assertEquals(homePage.verifyPillowTitle(), PageConstants.MIDTRANSPILLOWTITLE);
-		Assert.assertEquals(homePage.clickOnBuyNowBtn(), true);
+		AssertJUnit.assertEquals(homePage.verifyPillowTitle(), PageConstants.MIDTRANSPILLOWTITLE);
+		AssertJUnit.assertEquals(homePage.clickOnBuyNowBtn(), true);
 		homePage.enterCustomerDetailsAndClickOnCheckoutBtn(PageConstants.USERNAME, PageConstants.EMAIL, PageConstants.PHONENO, PageConstants.CITY, PageConstants.ADDRESS, PageConstants.POSTALCODE);
 		switchiFrameOne();
 		orderSummaryPage.clickOnContinueBtn();
@@ -53,7 +55,7 @@ public class EnterInvalidCardDetailsTest extends BrowserUtils{
 		creditCardPage.enterOTP(configReader.getStaticProperty("otp"));
 		creditCardPage.clickOnOkBtn();
 		switchiFrameOne();
-		Assert.assertEquals(creditCardPage.getTransactionFailureMsgReason(), PageConstants.TRANSACTIONFAILUREREASON);
+		AssertJUnit.assertEquals(creditCardPage.getTransactionFailureMsgReason(), PageConstants.TRANSACTIONFAILUREREASON);
 	}
 
 

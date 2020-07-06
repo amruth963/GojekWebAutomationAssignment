@@ -1,5 +1,7 @@
 package com.creditcardpage.testscripts;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -20,8 +22,8 @@ public class EnterValidCardDetailsTest extends BrowserUtils{
 	@Test(description = "Verify Transaction success message on entering valid card details")
 	public void enterValidCardDetails() {
 		homePage.launchUrl();
-		Assert.assertEquals(homePage.verifyPillowTitle(), PageConstants.MIDTRANSPILLOWTITLE);
-		Assert.assertEquals(homePage.clickOnBuyNowBtn(), true);
+		AssertJUnit.assertEquals(homePage.verifyPillowTitle(), PageConstants.MIDTRANSPILLOWTITLE);
+		AssertJUnit.assertEquals(homePage.clickOnBuyNowBtn(), true);
 		homePage.enterCustomerDetailsAndClickOnCheckoutBtn(PageConstants.USERNAME, PageConstants.EMAIL, PageConstants.PHONENO, PageConstants.CITY, PageConstants.ADDRESS, PageConstants.POSTALCODE);
 		switchiFrameOne();
 		orderSummaryPage.clickOnContinueBtn();
@@ -32,7 +34,7 @@ public class EnterValidCardDetailsTest extends BrowserUtils{
 		creditCardPage.clickOnPayNowBtn();
 		creditCardPage.enterOTP(configReader.getStaticProperty("otp"));
 		creditCardPage.clickOnOkBtn();
-		Assert.assertEquals(creditCardPage.getTransactionSuccessMsg(), PageConstants.PURCHASESUCCESSMSG);
+		AssertJUnit.assertEquals(creditCardPage.getTransactionSuccessMsg(), PageConstants.PURCHASESUCCESSMSG);
 	}
 
 
