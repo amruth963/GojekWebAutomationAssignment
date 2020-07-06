@@ -10,5 +10,6 @@ Pre-Requisites:
 
 Steps to run the project
 
-1. Clone the project and open "WebAutomationAssignment" in any IDE and run the project
-2. Clone project, open terminal and "cd" to project directory and enter "mvn clean test" command to execute tests
+Method 1. Clone the project and open "WebAutomationAssignment" in Eclipse IDE and Right click on pom.xml file and click "Run As > Maven Test" run the project. 
+Note: If you are using IntelliJ IDE, open project "WebAutomationAssignment" right click and run the project
+Method 2. Clone project, open terminal and "cd" to project directory and enter "mvn clean test" command to execute tests
