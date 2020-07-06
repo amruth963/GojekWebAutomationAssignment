@@ -12,5 +12,6 @@ public class PageConstants {
 	public static final String TRANSACTIONSUCCSSMSG = "Transaction successful";
 	public static final String TRANSACTIONFAILUREMSG = "Transaction failed";
 	public static final String TRANSACTIONFAILUREREASON = "Your card got declined by the bank";
+	public static final String PURCHASESUCCESSMSG = "Thank you for your purchase.";
 
 }
