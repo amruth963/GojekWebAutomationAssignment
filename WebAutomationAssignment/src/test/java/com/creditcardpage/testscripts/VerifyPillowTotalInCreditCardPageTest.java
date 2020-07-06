@@ -15,7 +15,7 @@ public class VerifyPillowTotalInCreditCardPageTest extends BrowserUtils{
 	private OrderSummaryPage orderSummaryPage = new OrderSummaryPage();
 	private CreditCardPage creditCardPage = new CreditCardPage();
 
-	@Test
+	@Test(description = "Verify pillow total between Order Summary and Credit Card page")
 	public void verifyPillowTotalInCreditCardPage() {
 		homePage.launchUrl();
 		Assert.assertEquals(homePage.verifyPillowTitle(), PageConstants.MIDTRANSPILLOWTITLE);

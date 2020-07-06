@@ -17,7 +17,7 @@ public class EnterValidCardDetailsTest extends BrowserUtils{
 	private CreditCardPage creditCardPage = new CreditCardPage();
 	private ConfigReader configReader = new ConfigReader();
 
-	@Test
+	@Test(description = "Verify Transaction success message on entering valid card details")
 	public void enterValidCardDetails() {
 		homePage.launchUrl();
 		Assert.assertEquals(homePage.verifyPillowTitle(), PageConstants.MIDTRANSPILLOWTITLE);
