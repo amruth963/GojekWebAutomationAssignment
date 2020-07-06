@@ -45,6 +45,7 @@ public class BrowserUtils {
 		driver.quit();
 	}
 
+
 	public WebElement webDriverWait(By locators) {
 		WebElement ele = null;
 		try {
@@ -139,12 +140,25 @@ public class BrowserUtils {
 
 	}
 
-	public void switchiFrame() {
+	public void switchiFrameOne() {
 		try {
+			driver.switchTo().defaultContent();
 			driver.switchTo().frame("snap-midtrans");
 		}catch (Exception e) {
 			Assert.fail("Unable to switch to iframe due to " + e.getMessage());
 		}
-
 	}
+
+	public void switchiFrameTwo() {
+		try {
+			driver.switchTo().defaultContent();
+			driver.switchTo().frame(0);
+			driver.switchTo().frame(0);
+		}catch (Exception e) {
+			Assert.fail("Unable to switch to iframe due to " + e.getMessage());
+		}
+	}
+
+
+
 }
