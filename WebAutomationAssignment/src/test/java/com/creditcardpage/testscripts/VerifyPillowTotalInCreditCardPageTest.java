@@ -21,7 +21,7 @@ public class VerifyPillowTotalInCreditCardPageTest extends BrowserUtils{
 		Assert.assertEquals(homePage.verifyPillowTitle(), PageConstants.MIDTRANSPILLOWTITLE);
 		Assert.assertEquals(homePage.clickOnBuyNowBtn(), true);
 		homePage.enterCustomerDetailsAndClickOnCheckoutBtn(PageConstants.USERNAME, PageConstants.EMAIL, PageConstants.PHONENO, PageConstants.CITY, PageConstants.ADDRESS, PageConstants.POSTALCODE);
-		switchiFrame();
+		switchiFrameOne();
 		String totalPriceInOrderSummaryPage = orderSummaryPage.verifyPillowTotalOnOrderSummaryPage();
 		orderSummaryPage.clickOnContinueBtn();
 		orderSummaryPage.selectCreditCardPaymentOption();
